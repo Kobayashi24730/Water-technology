@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(34, 34, 34);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 20px;
+}
+
+.title {
+  font-size: 35px;
+  text-align: center;
+  color: rgb(132, 14, 201);
+  margin-bottom: 20px;
+}
+
+.file {
+  display: block;
+  margin: 0 auto 20px auto;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: blueviolet;
+  color: white;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.div {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+#tableContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#lineChart {
+  background-color: azure;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Responsivo (para telas menores) ---------- */
+@media screen and (max-width: 768px) {
+  .div {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .file {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #lineChart {
+    height: 300px;
+  }
+}

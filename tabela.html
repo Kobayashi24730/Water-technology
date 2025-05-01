@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Leitura de pH da Água - Tabela e Gráfico</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background: rgb(34, 34, 34);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: rgb(132, 14, 201);
+      margin-bottom: 20px;
+    }
+
+    .btn-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    button, input[type="file"] {
+      background-color: blueviolet;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type="file"] {
+      background-color: white;
+      color: black;
+    }
+
+    table, th, td {
+      border: 1px solid rgb(132, 14, 201);
+      border-collapse: collapse;
+      background-color: white;
+      color: black;
+      padding: 6px;
+      margin: 0 auto 30px;
+    }
+
+    canvas {
+      background-color: azure;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      canvas {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      table {
+        font-size: 14px;
+        max-width: 100%;
+        overflow-x: auto;
+      }
+
+      button, input[type="file"] {
+        width: 100%;
+      }
+
+      .btn-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body> 
+  <h2>Visualizar Dados de pH da Água</h2>
+
+  <div class="btn-container">
+    <button onclick="carregarDadosExemplo()">Usar Dados de Exemplo</button>
+    <input type="file" id="fileInput" accept=".csv,.txt">
+  </div>
+
+  <div id="tableContainer"></div>
+  <canvas id="lineChart" width="700" height="350"></canvas>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+
+    fileInput.addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        processarDados(event.target.result);
+      };
+      reader.readAsText(file);
+    });
+
+    function carregarDadosExemplo() {
+      const dadosExemplo = `
+Data,pH
+2024-05-01,7.2
+2024-05-02,6.8
+2024-05-03,7.5
+2024-05-04,7.0
+2024-05-05,6.6
+2024-05-06,7.1
+`.trim();
+      processarDados(dadosExemplo);
+    }
+
+    function processarDados(texto) {
+      const lines = texto.trim().split('\n');
+      const headers = lines[0].split(',');
+      const dataRows = lines.slice(1).map(line => line.split(','));
+
+      // Tabela
+      let tabelaHTML = '<table><thead><tr>';
+      headers.forEach(h => tabelaHTML += `<th>${h}</th>`);
+      tabelaHTML += '</tr></thead><tbody>';
+      dataRows.forEach(row => {
+        tabelaHTML += '<tr>';
+        row.forEach(cell => tabelaHTML += `<td>${cell}</td>`);
+        tabelaHTML += '</tr>';
+      });
+      tabelaHTML += '</tbody></table>';
+      document.getElementById('tableContainer').innerHTML = tabelaHTML;
+
+      // Gráfico
+      const labels = dataRows.map(r => r[0]);
+      const valoresPH = dataRows.map(r => parseFloat(r[1]));
+
+      const ctx = document.getElementById('lineChart').getContext('2d');
+      if (window.meuGrafico) window.meuGrafico.destroy();
+      window.meuGrafico = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'pH da Água',
+            data: valoresPH,
+            borderColor: 'blue',
+            backgroundColor: 'rgba(132, 14, 201, 0.2)',
+            fill: true,
+            tension: 0.4
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            x: {
+              title: { display: true, text: headers[0] }
+            },
+            y: {
+              min: 0,
+              max: 14,
+              title: { display: true, text: 'pH' }
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
