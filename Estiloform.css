@@ -51,40 +51,8 @@ legend {
     color: var(--button-white);
 }
 
-.radio {
-    border-radius: 1.6rem;
-    background-color: var(--button-light);
-    border: 0.1rem solid var(--border);
-    padding: 2.4rem;
-    margin-top: 2.4rem;
-}
+.div-p{
 
-.radio > div {
-    display: flex;
-    gap: 0.8rem;
-}
-
-.radio input[type="radio"] {
-    appearance: none;
-    background-color: var(--border);
-    width: 2.8rem;
-    height: 2.8rem;
-    border: 1px solid #BBC1C1;
-    border-radius: 50%;
-    position: relative;
-}
-
-.radio input[type="radio"]:checked {
-    background-image: radial-gradient(white 35%, black 40%);
-}
-
-.radio p {
-    margin-left: 3.8rem;
-    margin-top: 1rem;
-}
-
-.radio label {
-    font-size: 2rem;
 }
 
 .checkbox {
