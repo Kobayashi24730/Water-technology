@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Baskervville:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="Estiloform.css" rel="stylesheet">
+</head>
+<body>
+    <form action="https://formspree.io/f/mbloogyw" method="POST">
+        <fieldset>
+            <legend>A Importância da Medição do pH da Água para a Qualidade de Vida</legend>
+            
+            <div class="div-p">
+              <label for="q1">1. Voce sabe que é pH?</label>
+              <div class="chec2">
+                  <input name="sim" type="checkbox">
+                  <label for="">Sim</label>
+                  <input name="nao" type="checkbox">
+                  <label for="nao">Nao</label>
+              </div>
+                <!-- Substituindo questão 2 -->
+              <label for="q2">2. Para que serve a medição do pH da água?</label>
+              <div class="chec2">
+                  <input type="checkbox" id="q2a" name="q2" value="Monitorar qualidade da água">
+                  <label for="q2a">Monitorar qualidade da água</label><br>
+                  <input type="checkbox" id="q2b" name="q2" value="Determinar potabilidade">
+                  <label for="q2b">Determinar potabilidade</label><br>
+                  <input type="checkbox" id="q2c" name="q2" value="Evitar problemas de saúde">
+                  <label for="q2c">Evitar problemas de saúde</label>
+              </div>
+              
+              <!-- Substituindo questão 3 -->
+              <label for="q3">3. Quais são os principais problemas que podem ser causados por pH inadequado na água?</label>
+              <div class="chec2">
+                  <input type="checkbox" id="q3a" name="q3" value="Corrosão de encanamentos">
+                  <label for="q3a">Corrosão de encanamentos</label><br>
+                  <input type="checkbox" id="q3b" name="q3" value="Impacto na saúde humana">
+                  <label for="q3b">Impacto na saúde humana</label><br>
+                  <input type="checkbox" id="q3c" name="q3" value="Prejuízos à agricultura">
+                  <label for="q3c">Prejuízos à agricultura</label>
+              </div>
+  
+              <label for="q4">4. Você acha que a medição do pH da água é um tema relevante para a população em geral?</label>
+              <div class="chec2">
+                  <input name="sim" type="checkbox">
+                  <label for="">Sim</label>
+                  <input name="nao" type="checkbox">
+                  <label for="nao">Nao</label>
+              </div>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" id="check2" name="interesse2" value="sim">
+                <label for="check2">Concordo com enviar os dados do formulário e reseber notificações sobre atualizaçoes futuras.</label>
+            </div>
+            
+            <button type="submit">Enviar</button>
+            <small>Criado pela equipe MET Conpat da MCR</small>
+        </fieldset>
+    </form>
+</body>
+</html>
