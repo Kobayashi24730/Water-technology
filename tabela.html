@@ -84,7 +84,7 @@
   <div class="btn-container">
     <button onclick="carregarDadosExemplo()">Carregar Dados do Ph agua + limao. </button>
     <button onclick="carregarDadosNormal()">Carregar Dados do Ph agua Normal. </button>
-        <button onclick="carregarDadosNormal()">Carregar Dados do pH agua alcalina. </button>
+        <button onclick="carregarDadosAlcalina()">Carregar Dados do pH agua alcalina. </button>
     <input type="file" id="fileInput" accept=".csv,.txt">
   </div>
 
@@ -288,7 +288,7 @@ Data,pH
     }
 
      /*Dados do pH agua alcalina*/
-        function carregarDadosNormal() {
+        function carregarDadosAlcalina() {
           const dadosExemplo = `
 Data,pH
 2025-05-08,8.74
