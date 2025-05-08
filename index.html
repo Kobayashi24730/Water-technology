@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P.H Technology</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="fonts.css" rel="stylesheet">
+    <link href="meida.css" rel="stylesheet">
+    <link href="media.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>P.H</h1>
+            <h1>technology</h1>
+        </div>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#desenvolvimento">Desenvolvimento</a></li>
+            <li><a href="#fotos">Fotos</a></li>
+            <li><a href="#programacao">Referências</a></li>
+            <li><a href="Estiloform.html">Formulário</a></li>
+            <li><a href="tabela.html" id="inscreva-se-btn">Dados (desenvolvimento)</a></li>
+        </ul>
+    </header>
+    
+    <main>
+        <aside>
+            <h2><span>Um pouco sobre</span></h2>
+            <h2>Arduino</h2>
+            <p class="p-aside">
+                Arduino é uma plataforma de prototipagem eletrônica composta por hardware e software. Ela permite o desenvolvimento de projetos com microcontroladores que interagem com o mundo físico por meio de sensores e atuadores.
+            </p>
+        </aside>
+        <article style="display: flex; align-items:center;">
+            <img src="ArduinoUno.svg.png" alt="Imagem de placa Arduino Uno">
+        </article>
+    </main>
+
+    <div class="space-div" id="inicio"></div>
+
+    <section class="section-one section-inicio">
+        <h2 style="text-align: center;"><span>Contextualização</span></h2>
+        <div>
+            <p class="p">
+                <strong>1. Definição do Objetivo</strong><br><br>
+                Medir o pH da água em tempo real com Arduino, para controle em aquários, hidroponia e ambientes naturais.
+            </p>
+            <p class="p">
+                <strong>2. Materiais Utilizados:</strong><br><br>
+                - Placa Arduino Uno<br>
+                - Sensor de pH com sonda<br>
+                - Módulo adaptador<br>
+                - Jumpers<br>
+                - Fonte USB<br>
+                - Soluções de calibração (pH 4, 7 e 10)<br>
+                - Display LCD 16x2 com I2C (opcional)<br>
+                - Arduino IDE<br>
+            </p>
+        </div>
+    </section>
+
+    <section class="section-one section-inicio">
+        <h2 style="text-align: center;"><span>Um pouco sobre o pH da água</span></h2>
+        <div>
+            <p class="p">
+                <strong>1. Escala de pH</strong><br><br>
+                - pH 7: neutro<br>
+                - < 7: ácido<br>
+                - > 7: básico<br>
+            </p>
+            <p class="p">
+                <strong>2. Importância</strong><br><br>
+                - Saúde dos organismos aquáticos<br>
+                - Qualidade da água potável<br>
+                - Processos químicos e biológicos<br>
+            </p>
+        </div>
+        <div style="display:flex; align-items:center; flex-direction: column; height: 200px;">
+            <h2 style="text-align: center;"><span>Tabela referente ao pH da água</span></h2>
+            <img style=" width: 70%; height:auto;" src="tabela-de-ph (1).jpg" alt="Imagem da escala de pH">
+        </div>
+    </section>
+
+    <section id="desenvolvimento" class="div-des section-one">
+        <h2 style="text-align: center;"><span>Sobre o desenvolvimento</span></h2>
+        <div class="list-des">
+            <ul>
+                <li>1. Planejamento: definir objetivo, dados e componentes.</li>
+                <li>2. Escolha dos componentes: Arduino, sensores, resistores.</li>
+                <li>3. Montagem e programação: conexão e testes.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="fotos" class="fotos section-one">
+        <h2 style="text-align: center;"><span>Fotos do Projeto</span></h2>
+        <div class="grid">
+            <div class="img"><img src="IMG-20250429-WA0017_123456.jpg" alt="Foto 1"></div>
+            <div class="img"><img src="IMG-20250430-WA0013_123601.jpg" alt="Foto 3"></div>
+            <div class="img"><img src="IMG-20250430-WA0015_123623.jpg" alt="Foto 5"></div>
+            <div class="img"><img src="IMG-20250501-WA0000_123545.jpg" alt="Foto 7"></div>
+        </div>
+    </section>
+
+    <section id="programacao" class="div-des section-one">
+        <h2 style="text-align: center;"><span>Links de Referências</span></h2>
+        <div class="fontes-pes">
+            <ul>
+                <li><strong>Automação com Arduino:</strong> <a href="http://ric.cps.sp.gov.br/handle/123456789/23518" target="_blank">Ir ao Site</a></li>
+                <li><strong>Medidor de pH portátil:</strong> <a href="http://periodicos.ifsertaope.edu.br/ojs2/index.php/jince/article/view/1971" target="_blank">Ir ao Site</a></li>
+                <li><strong>pH em bebidas:</strong> <a href="http://pesquisa.bvsalud.org/portal/resource/pt/lil-533574" target="_blank">Ir ao Site</a></li>
+                <li><strong>pH da água no sangue:</strong> <a href="http://laboratoriocavalieri.com.br/2017/04/01/influencia-ph-da-agua-no-ph-nosso-sangue/" target="_blank">Ir ao Site</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="space-div roda-ent">
+        <h2>P.H Technology</h2>
+    </div>
+
+    <footer class="rodape section-one">
+        <div class="contact">
+            <h2>Criadores</h2>
+            <p>Ronaldo Nogueira – Gestor do projeto</p>
+            <p>Jonas Lopes Monteiro – Gerente de projetos</p>
+            <p>Guilherme da Silva Ferreira – Programador</p>
+            <p>Sidney Gabriel Alves Ruas – Programador BCT</p>
+            <p>Kaylane da Silva Melo – Designer</p>
+            <p>Marcos Victor Marcial de Abreu – Engenheiro</p>
+            <p>Caua Nogueira Soares – Engenheiro</p>
+            <p>Natanya Chave Batista – Pesquisadora</p>
+            <p>YWD Kaua Pereira da Costa – Pesquisador</p>
+        </div>
+        <div>
+            <h3>Comércio</h3>
+            <p>(85) 99269-5835</p>
+            <h3>Contato</h3>
+            <p>(85) 99201-3322</p>
+            <h3>Suporte</h3>
+            <p class="lista">kobayashi@gmail.com</p>
+            <h3>Linguagens Utilizadas</h3>
+            <ul>
+                <li>C++</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>Python</li>
+                <li>Java</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
