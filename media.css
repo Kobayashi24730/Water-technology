@@ -1,1 +1,216 @@
+/* pc */
+@media (max-width: 1600px) and (max-height: 900px) {
+    body {
+        padding: 10px; /* Reduz o padding do body */
+    }
 
+    header {
+        flex-direction: column; /* Muda a direção do header para coluna */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    #title {
+        text-align: center; /* Centraliza o título */
+    }
+
+    main {
+        flex-direction: column; /* Muda a direção do main para coluna */
+        align-items: center; /* Centraliza os itens do main */
+    }
+
+    .section-one {
+        padding: 3rem 0; /* Reduz o padding das seções */
+    }
+
+    h2 {
+        font-size: 48px; /* Reduz o tamanho da fonte dos h2 */
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Muda a grade para 2 colunas */
+    }
+
+    .fontes-pes {
+        flex-direction: column; /* Muda a direção da lista de fontes para coluna */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    .rodape {
+        grid-template-columns: 1fr; /* Muda o rodapé para uma coluna */
+    }
+}
+
+/* mobile */
+@media (max-width: 720px) and (max-height: 1650px) {
+    body {
+        padding: 5px; /* Reduz o padding do body */
+    }
+
+    header {
+        flex-direction: column; /* Muda a direção do header para coluna */
+        align-items: center; /* Centraliza os itens do header */
+        padding: 10px; /* Adiciona padding ao header */
+    }
+
+    #title {
+        text-align: center; /* Centraliza o título */
+        margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+    }
+
+    main {
+        flex-direction: column; /* Muda a direção do main para coluna */
+        align-items: center; /* Centraliza os itens do main */
+        padding: 0; /* Remove padding do main */
+    }
+
+    .section-one {
+        padding: 2rem 0; /* Reduz o padding das seções */
+    }
+
+    h2 {
+        font-size: 36px; /* Reduz o tamanho da fonte dos h2 */
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Muda a grade para 1 coluna */
+    }
+
+    .fontes-pes {
+        flex-direction: column; /* Muda a direção da lista de fontes para coluna */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    .rodape {
+        grid-template-columns: 1fr; /* Muda o rodapé para uma coluna */
+        padding: 20px 0; /* Adiciona padding ao rodapé */
+    }
+
+    .p-aside, .p {
+        font-size: 16px; /* Reduz o tamanho da fonte dos parágrafos */
+    }
+
+    #inscreva-se-btn {
+        padding: 8px 12px; /* Ajusta o padding do botão */
+        font-size: 14px; /* Reduz o tamanho da fonte do botão */
+    }
+
+    img {
+        max-width: 100%; /* Garante que as imagens não ultrapassem a largura do contêiner */
+        height: auto; /* Mantém a proporção das imagens */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduz o padding do body */
+    }
+
+    header {
+        flex-direction: column; /* Muda a direção do header para coluna */
+        align-items: center; /* Centraliza os itens do header */
+        padding: 10px; /* Adiciona padding ao header */
+    }
+
+    #title {
+        text-align: center; /* Centraliza o título */
+        margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+    }
+
+    main {
+        flex-direction: column; /* Muda a direção do main para coluna */
+        align-items: center; /* Centraliza os itens do main */
+        padding: 0; /* Remove padding do main */
+    }
+
+    .section-one {
+        padding: 2rem 0; /* Reduz o padding das seções */
+    }
+
+    h2 {
+        font-size: 32px; /* Reduz o tamanho da fonte dos h2 */
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Muda a grade para 1 coluna */
+    }
+
+    .fontes-pes {
+        flex-direction: column; /* Muda a direção da lista de fontes para coluna */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    .rodape {
+        grid-template-columns: 1fr; /* Muda o rodapé para uma coluna */
+        padding: 20px 0; /* Adiciona padding ao rodapé */
+    }
+
+    .p-aside, .p {
+        font-size: 16px; /* Reduz o tamanho da fonte dos parágrafos */
+    }
+
+    #inscreva-se-btn {
+        padding: 8px 12px; /* Ajusta o padding do botão */
+        font-size: 14px; /* Reduz o tamanho da fonte do botão */
+    }
+
+    img {
+        max-width: 100%; /* Garante que as imagens não ultrapassem a largura do contêiner */
+        height: auto; /* Mantém a proporção das imagens */
+    }
+}
+
+@media (max-width: 2400px) and (max-height: 1080px) {
+    body {
+        padding: 20px; /* Ajusta o padding do body */
+    }
+
+    header {
+        width: 90%; /* Ajusta a largura do header */
+        padding: 15px; /* Adiciona padding ao header */
+    }
+
+    #title {
+        text-align: left; /* Alinha o título à esquerda */
+    }
+
+    main {
+        flex-direction: row; /* Mantém a direção do main como linha */
+        justify-content: space-between; /* Espaça os itens do main */
+    }
+
+    .section-one {
+        padding: 4rem 0; /* Aumenta o padding das seções */
+    }
+
+    h2 {
+        font-size: 64px; /* Aumenta o tamanho da fonte dos h2 */
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Mantém a grade com 3 colunas */
+    }
+
+    .fontes-pes {
+        flex-direction: row; /* Mantém a direção da lista de fontes como linha */
+        justify-content: space-around; /* Espaça os itens da lista de fontes */
+    }
+
+    .rodape {
+        grid-template-columns: repeat(2, 1fr); /* Mantém o rodapé com 2 colunas */
+        padding: 40px 0; /* Aumenta o padding do rodapé */
+    }
+
+    .p-aside, .p {
+        font-size: 18px; /* Ajusta o tamanho da fonte dos parágrafos */
+    }
+
+    #inscreva-se-btn {
+        padding: 10px 15px; /* Ajusta o padding do botão */
+        font-size: 16px; /* Aumenta o tamanho da fonte do botão */
+    }
+
+    img {
+        max-width: 100%; /* Garante que as imagens não ultrapassem a largura do contêiner */
+        height: auto; /* Mantém a proporção das imagens */
+    }
+}
