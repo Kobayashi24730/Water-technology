@@ -177,7 +177,7 @@
     }
 
     .grid {
-        grid-template-columns: repeat(3, 1fr); /* Mantém a grade com 3 colunas */
+        grid-template-columns: repeat(2, 1fr); /* Mantém a grade com 3 colunas */
     }
 
     .fontes-pes {
