@@ -24,6 +24,8 @@ header {
     background: #2b2d42;
     padding: 10px 0;
 }
+
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -43,6 +45,7 @@ nav a {
   color: white; /* ou a cor que preferir */
   font-size: 1rem; /* diminui o texto */
 }
+
 
 .space-div {
     height: 6rem;
