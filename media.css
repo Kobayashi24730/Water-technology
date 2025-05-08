@@ -155,7 +155,7 @@
     }
 
     header {
-        width: 75%; /* Ajusta a largura do header */
+        width: 95%; /* Ajusta a largura do header */
         padding: 15px; /* Adiciona padding ao header */
     }
 
@@ -186,7 +186,7 @@
     }
 
     .rodape {
-        grid-template-columns: repeat(2, 1fr); /* Mantém o rodapé com 2 colunas */
+        grid-template-columns: repeat(3, 1fr); /* Mantém o rodapé com 2 colunas */
         padding: 40px 0; /* Aumenta o padding do rodapé */
     }
 
