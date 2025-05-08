@@ -15,39 +15,36 @@ body {
 
 
 header {
-  display: flex;
-  flex-wrap: wrap; /* permite quebrar em telas pequenas */
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  position: fixed;
-  z-index: 1000;
-  border-bottom: 1px solid lightgrey;
-  background: #2b2d42;
-  padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center; /* garante que os itens centralizem na vertical */
+height: auto; / altura fixa /
+position: fixed;
+width: 95%;
+z-index: 1000;
+border-bottom: 1px solid lightgrey;
+background: #2b2d42;
+padding: 0 10px; /* remove padding vertical para não ultrapassar 40px */
+box-sizing: border-box;
+}
+ul {
+display: flex;
+flex-wrap: wrap; /* permite quebra de linha */
+gap: 10px;
+list-style: none;
+padding: 0;
+margin: 0;
 }
 
-.logo {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-right: 20px;
-}
-
-nav ul {
-  display: flex;
-  flex-wrap: wrap; /* quebra em várias linhas em telas pequenas */
-  gap: 10px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+nav li {
 }
 
 nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
+text-decoration: none;
+color: white;
+font-size: 1rem;
 }
+
 
 .space-div {
     height: 6rem;
