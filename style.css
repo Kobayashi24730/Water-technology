@@ -18,7 +18,7 @@ header {
     align-items: center; /* garante que os itens centralizem na vertical */
     height: auto; /* altura fixa */
     position: fixed;
-    width: 100%;
+    width: 95%;
     z-index: 1000;
     border-bottom: 1px solid lightgrey;
     background: #2b2d42;
@@ -173,7 +173,7 @@ img {
 /* Galeria de imagens com zoom */
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
