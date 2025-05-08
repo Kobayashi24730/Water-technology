@@ -18,7 +18,7 @@ header {
     align-items: center; /* garante que os itens centralizem na vertical */
     height: auto; /* altura fixa */
     position: fixed;
-    width: 95%;
+    width: 100%;
     z-index: 1000;
     border-bottom: 1px solid lightgrey;
     background: #2b2d42;
