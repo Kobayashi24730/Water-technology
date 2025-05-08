@@ -24,6 +24,25 @@ header {
     background: #2b2d42;
     padding: 10px 0;
 }
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* espaço entre os itens */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline; /* ou use flex, se quiser estilizar mais */
+}
+
+nav a {
+  text-decoration: none;
+  color: white; /* ou a cor que preferir */
+  font-size: 1rem; /* diminui o texto */
+}
 
 .space-div {
     height: 6rem;
