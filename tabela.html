@@ -82,7 +82,8 @@
   <h2>Visualizar Dados de pH da Água</h2>
 
   <div class="btn-container">
-    <button onclick="carregarDadosExemplo()">Carregar Dados do Ph + Limao. </button>
+    <button onclick="carregarDadosExemplo()">Carregar Dados do Ph agua + limao. </button>
+    <button onclick="carregarDadosNormal()">Carregar Dados do Ph agua Normal </button>
     <input type="file" id="fileInput" accept=".csv,.txt">
   </div>
 
@@ -103,6 +104,7 @@
       reader.readAsText(file);
     });
 
+    /*Dados do pH agua + limao*/
     function carregarDadosExemplo() {
       const dadosExemplo = `
 Data,pH
@@ -132,6 +134,95 @@ Data,pH
 2025-05-07,2,20
 2025-05-07,2,24
 2025-05-07,2,28
+
+     
+`.trim();
+      processarDados(dadosExemplo);
+    }
+
+    function processarDados(texto) {
+      const lines = texto.trim().split('\n');
+      const headers = lines[0].split(',');
+      const dataRows = lines.slice(1).map(line => line.split(','));
+
+      // Tabela
+      let tabelaHTML = '<table><thead><tr>';
+      headers.forEach(h => tabelaHTML += `<th>${h}</th>`);
+      tabelaHTML += '</tr></thead><tbody>';
+      dataRows.forEach(row => {
+        tabelaHTML += '<tr>';
+        row.forEach(cell => tabelaHTML += `<td>${cell}</td>`);
+        tabelaHTML += '</tr>';
+      });
+      tabelaHTML += '</tbody></table>';
+      document.getElementById('tableContainer').innerHTML = tabelaHTML;
+
+      // Gráfico
+      const labels = dataRows.map(r => r[0]);
+      const valoresPH = dataRows.map(r => parseFloat(r[1]));
+
+      const ctx = document.getElementById('lineChart').getContext('2d');
+      if (window.meuGrafico) window.meuGrafico.destroy();
+      window.meuGrafico = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'pH da Água',
+            data: valoresPH,
+            borderColor: 'blue',
+            backgroundColor: 'rgba(132, 14, 201, 0.2)',
+            fill: true,
+            tension: 0.4
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            x: {
+              title: { display: true, text: headers[0] }
+            },
+            y: {
+              min: 0,
+              max: 14,
+              title: { display: true, text: 'pH' }
+            }
+          }
+        }
+      });
+    }
+
+    
+ /*Dados do pH agua normal*/
+        function carregarDadosNormal() {
+          const dadosExemplo = `
+    Data,pH
+    2025-05-07,7.2
+    2025-05-07,6.8
+    2025-05-07,7.5
+    2025-05-07,7.0
+    2025-05-07,6.6
+    2025-05-07,7.1
+    2025-05-07,1,52
+    2025-05-07,1,58
+    2025-05-07,1,63
+    2025-05-07,1,67
+    2025-05-07,1,71
+    2025-05-07,1,74
+    2025-05-07,1,78
+    2025-05-07,1,83
+    2025-05-07,1,87
+    2025-05-07,1,91
+    2025-05-07,1,94
+    2025-05-07,1,98
+    2025-05-07,2,02
+    2025-05-07,2,06
+    2025-05-07,2,10
+    2025-05-07,2,13
+    2025-05-07,2,17
+    2025-05-07,2,20
+    2025-05-07,2,24
+    2025-05-07,2,28
 
 `.trim();
       processarDados(dadosExemplo);
