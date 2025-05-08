@@ -83,7 +83,8 @@
 
   <div class="btn-container">
     <button onclick="carregarDadosExemplo()">Carregar Dados do Ph agua + limao. </button>
-    <button onclick="carregarDadosNormal()">Carregar Dados do Ph agua Normal </button>
+    <button onclick="carregarDadosNormal()">Carregar Dados do Ph agua Normal. </button>
+        <button onclick="carregarDadosNormal()">Carregar Dados do pH agua alcalina. </button>
     <input type="file" id="fileInput" accept=".csv,.txt">
   </div>
 
@@ -108,12 +109,6 @@
     function carregarDadosExemplo() {
       const dadosExemplo = `
 Data,pH
-2025-05-07,7.2
-2025-05-07,6.8
-2025-05-07,7.5
-2025-05-07,7.0
-2025-05-07,6.6
-2025-05-07,7.1
 2025-05-07,1,52
 2025-05-07,1,58
 2025-05-07,1,63
@@ -203,26 +198,116 @@ Data,pH
     2025-05-07,7.0
     2025-05-07,6.6
     2025-05-07,7.1
-    2025-05-07,1,52
-    2025-05-07,1,58
-    2025-05-07,1,63
-    2025-05-07,1,67
-    2025-05-07,1,71
-    2025-05-07,1,74
-    2025-05-07,1,78
-    2025-05-07,1,83
-    2025-05-07,1,87
-    2025-05-07,1,91
-    2025-05-07,1,94
-    2025-05-07,1,98
-    2025-05-07,2,02
-    2025-05-07,2,06
-    2025-05-07,2,10
-    2025-05-07,2,13
-    2025-05-07,2,17
-    2025-05-07,2,20
-    2025-05-07,2,24
-    2025-05-07,2,28
+    2025-05-07,7.67
+    2025-05-07,7.13
+    2025-05-07,7.74
+    2025-05-07,7.48
+    2025-05-07,7.21
+    2025-05-07,7.33
+    2025-05-07,7.70
+    2025-05-07,7.28
+    2025-05-07,7.60
+    2025-05-07,7.24
+    2025-05-07,7.56
+    2025-05-07,7.37
+    2025-05-07,7.02
+    2025-05-07,7.08
+    2025-05-07,7.44
+    2025-05-07,7.63
+    2025-05-07,7.17
+    2025-05-07,7.78
+    2025-05-07,7.41
+    2025-05-07,7.52
+
+
+`.trim();
+      processarDados(dadosExemplo);
+    }
+
+    function processarDados(texto) {
+      const lines = texto.trim().split('\n');
+      const headers = lines[0].split(',');
+      const dataRows = lines.slice(1).map(line => line.split(','));
+
+      // Tabela
+      let tabelaHTML = '<table><thead><tr>';
+      headers.forEach(h => tabelaHTML += `<th>${h}</th>`);
+      tabelaHTML += '</tr></thead><tbody>';
+      dataRows.forEach(row => {
+        tabelaHTML += '<tr>';
+        row.forEach(cell => tabelaHTML += `<td>${cell}</td>`);
+        tabelaHTML += '</tr>';
+      });
+      tabelaHTML += '</tbody></table>';
+      document.getElementById('tableContainer').innerHTML = tabelaHTML;
+
+      // Gráfico
+      const labels = dataRows.map(r => r[0]);
+      const valoresPH = dataRows.map(r => parseFloat(r[1]));
+
+      const ctx = document.getElementById('lineChart').getContext('2d');
+      if (window.meuGrafico) window.meuGrafico.destroy();
+      window.meuGrafico = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'pH da Água',
+            data: valoresPH,
+            borderColor: 'blue',
+            backgroundColor: 'rgba(132, 14, 201, 0.2)',
+            fill: true,
+            tension: 0.4
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            x: {
+              title: { display: true, text: headers[0] }
+            },
+            y: {
+              min: 0,
+              max: 14,
+              title: { display: true, text: 'pH' }
+            }
+          }
+        }
+      });
+    }
+
+     /*Dados do pH agua alcalina*/
+        function carregarDadosNormal() {
+          const dadosExemplo = `
+Data,pH
+2025-05-07,8.74
+2025-05-07,8.13
+2025-05-07,8.81
+2025-05-07,8.48
+2025-05-07,8.24
+2025-05-07,8.37
+2025-05-07,8.70
+2025-05-07,8.08
+2025-05-07,8.56
+2025-05-07,8.44
+2025-05-07,8.17
+2025-05-07,8.63
+2025-05-07,8.33
+2025-05-07,8.28
+2025-05-07,8.02
+2025-05-07,8.21
+2025-05-07,8.60
+2025-05-07,8.78
+2025-05-07,8.41
+2025-05-07,8.52
+2025-05-07,9.04
+2025-05-07,9.12
+2025-05-07,9.25
+2025-05-07,9.33
+2025-05-07,9.48
+2025-05-07,9.60
+
+
 
 `.trim();
       processarDados(dadosExemplo);
