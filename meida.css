@@ -120,19 +120,25 @@
 }
 
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: row;
-    gap: 10px;
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os links */
   }
 
-  nav a {
-    font-size: 0.9rem;
+  h1, h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 10px;
+    text-align: justify;
+  }
+
+  .titulo-principal {
+    font-size: 2rem;
   }
 }
-
-@media (max-width: 600px) {
-  nav a {
-    font-size: 0.9rem;
-  }
-}
-
