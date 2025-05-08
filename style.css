@@ -18,7 +18,7 @@ header {
     height: 30px;
     align-items: center;
     position: fixed;
-    width: 100%;
+    width: 95%;
     z-index: 1000;
     border-bottom: 1px solid lightgrey;
     background: #2b2d42;
