@@ -119,3 +119,14 @@
     }
 }
 
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+}
+
