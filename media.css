@@ -9,15 +9,6 @@
         align-items: flex-start; /* Alinha os itens à esquerda */
     }
 
-    #title {
-        text-align: center; /* Centraliza o título */
-    }
-
-    main {
-        flex-direction: column; /* Muda a direção do main para coluna */
-        align-items: center; /* Centraliza os itens do main */
-    }
-
     .section-one {
         padding: 3rem 0; /* Reduz o padding das seções */
     }
@@ -32,11 +23,7 @@
 
     .fontes-pes {
         flex-direction: column; /* Muda a direção da lista de fontes para coluna */
-        align-items: flex-start; /* Alinha os itens à esquerda */
-    }
-
-    .rodape {
-        grid-template-columns: 1fr; /* Muda o rodapé para uma coluna */
+        align-items: flex-start
     }
 }
 
