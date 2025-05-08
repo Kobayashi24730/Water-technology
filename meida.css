@@ -20,7 +20,7 @@ header {
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid lightgrey;
-    background: rgb(34, 34, 34);
+    background: #2b2d42;
     padding: 10px 0;
 }
 
