@@ -1,221 +1,229 @@
-*{
+/* Base Reset */
+* {
     scroll-behavior: smooth;
-}
-body{
-    background-color: #1e1e2f;
-    color: white;
-    font-family: poppinsregular;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px 15px 15px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-header{
+/* Global Styles */
+body {
+    background-color: #1e1e2f;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Header */
+header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    border-bottom: 0.1rem solid lightgrey;
-    background: #2b2d42;
-    padding: 0 10px;
     top: 0;
- 
+    width: 100%;
+    z-index: 1000;
+    background: #2b2d42;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 20px;
 }
 
-.space-div{
-    height: 5rem;
+/* Space for fixed header */
+.space-div {
+    height: 6rem;
 }
-#title{
+
+/* Title */
+#title {
+    display: flex;
     flex-direction: column;
-    line-height: 10px;
+    line-height: 1.2rem;
 }
 
-li{
-    display: inline-block;
-    margin: 20px;
+/* Navigation */
+ul {
+    display: flex;
+    list-style: none;
 }
 
-a{
+li {
+    margin: 0 15px;
+}
+
+a {
     color: white;
-}
-
-a:hover{
-    color: rgb(132, 14, 201);
+    text-decoration: none;
     transition: 0.3s all;
 }
 
-#inscreva-se-btn{
-    border: 2px solid rgb(132, 14, 201);
-    padding: 10px;
-    border-radius: 15px;
-}
-
-#inscreva-se-btn:hover{
-    background-color: rgb(132, 14, 201);
-    color: white;
-}
-
-h1{
-    font-weight: 200;
-}
-
-main{
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    padding-top: 5rem;
-}
-
-h2{
-    font-size: 56px;
-    line-height: 10px;
-    font-family: poppinsmedium;
-}
-
-span{
+a:hover {
     color: rgb(132, 14, 201);
 }
 
-.p-aside{
-    line-height: 20px;
-    max-width: 500px;
-    font-family: poppinslight;
+/* Call to Action Button */
+#inscreva-se-btn {
+    border: 2px solid rgb(132, 14, 201);
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+    line-height: 1;
 }
 
-img{
-    width: 580px;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-}
-
-form [type="submit"]{
-    height: 50px;
-    width: 50%;
+#inscreva-se-btn:hover {
     background-color: rgb(132, 14, 201);
     color: white;
-    font-weight: bold;
-}
-form [type="submit"]:hover{
-    cursor: pointer;
 }
 
-input{
-    margin-top: 20px;
-    height: 20px;
-    padding: 15px;
-    border-radius: 20px;
-    border: none;
-    font-size: 15px;
+/* Typography */
+h1 {
+    font-weight: 200;
 }
 
-.section-one{
+h2 {
+    font-size: 56px;
+    font-weight: 300;
+}
+
+span {
+    color: rgb(132, 14, 201);
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    padding-top: 5rem;
+    gap: 2rem;
+}
+
+/* Paragraphs */
+.p,
+.p-aside {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.6rem;
+}
+
+.p-aside {
+    max-width: 500px;
+}
+
+/* Section One */
+.section-one {
     height: 100vh;
+    padding: 5rem 0;
 }
-.section-inicio > div{
+
+.section-inicio > div {
     padding-top: 20px;
     max-width: 64rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    min-height: 100vh;
+    gap: 3rem;
     text-align: center;
-    gap: 3rem;
     font-size: 20px;
 }
-.section-inicio h2{
-    font-size: 56px;
-    line-height: 10px;
-    font-family: poppinslight;
+
+.section-inicio h2 {
+    font-weight: 300;
 }
-.p{
-    font-size: 20px;
-    font-family: poppinslight;
+
+/* Image */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
-.div-des > h2{
-    padding-top: 200px;
+
+/* Image Grid Gallery */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
-.list-des{
+
+.img {
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+}
+
+.img img {
+    transition: transform 0.4s ease-in-out;
+}
+
+.img img:hover {
+    transform: scale(1.1);
+}
+
+/* Description Section */
+.div-des > h2 {
+    padding-top: 100px;
+}
+
+.list-des {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
     align-items: center;
-    align-content: center;
 }
-.list-des ul{
-    padding-inline-start: 0;
 
+.list-des ul {
+    list-style: none;
 }
-.list-des li{
-    margin: 0;
-    padding: 10px;
+
+.list-des li {
+    margin: 10px 0;
     font-size: 20px;
-    line-height: 25px;
+    line-height: 1.6rem;
 }
-.grid{
+
+/* Contact and Footer */
+.rodape {
     display: grid;
-    grid-template-columns: repeat(3, 1.5fr);
-    gap: 3rem;
-    counter-reset: gridconter;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 30px 0;
 }
-.img{
-    width: 100%;
-    max-width: 36rem;
-    max-height: 36rem;
-    overflow: hidden;
+
+.contact h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
 }
-.img img{
-    transition: all 300ms ease-in-out;
+
+.lista {
+    padding-bottom: 20px;
 }
-.img img:hover{
-    transform:  translate(-3%, 3%) scale(1.2) rotate(5deg);
+
+#tfoot ul {
+    list-style: none;
 }
-.fontes-pes{
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-}
-.fontes-pes ul li{
-    gap: 3rem;
-}
-.rodape{
-    padding-top: 20px;
-}
-.roda-ent{
+
+/* Footer Bottom */
+.roda-ent {
     background-color: black;
     width: 100%;
     height: 100px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.roda-ent > h2{
+
+.roda-ent h2 {
     font-size: 20px;
 }
-.rodape{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    flex-direction: column;
-    flex-wrap: nowrap;
-    padding: 30px;
-}
-.contact{
 
+/* Font Sources Section */
+.fontes-pes {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
 }
-.contact > h2{
-    font-size: 30px;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-}
-.lista{
-    padding-bottom: 20px;
-}
-#tfoot div ul{
-    padding-inline-start: 0;
+
+.fontes-pes ul {
+    list-style: none;
 }
