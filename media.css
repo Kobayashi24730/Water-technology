@@ -6,7 +6,9 @@
 
     header {
         flex-direction: column; /* Muda a direção do header para coluna */
-        align-items: flex-start; /* Alinha os itens à esquerda */
+        align-items: center; /* Centraliza os itens do header */
+        width: 100%; /* Garante que o header ocupe 100% da largura */
+        padding: 10px; /* Adiciona padding */
     }
 
     .section-one {
@@ -23,31 +25,9 @@
 
     .fontes-pes {
         flex-direction: column; /* Muda a direção da lista de fontes para coluna */
-        align-items: flex-start
+        align-items: flex-start; /* Alinha os itens à esquerda */
     }
 }
-
-@media (max-width: 1600px) and (max-height: 4619px) {
-    body {
-        padding: 10px; /* Reduz o padding do body */
-    }
-    header {
-        padding: 10px; /* Reduz o padding do header */
-    }
-    h2 {
-        font-size: 36px; /* Ajusta o tamanho da fonte dos h2 */
-    }
-    .section-one {
-        padding: 10px; /* Reduz o padding das seções */
-    }
-    .grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta as colunas para telas longas */
-    }
-    footer {
-        padding: 10px; /* Reduz o padding do rodapé */
-    }
-}
-
 
 
 /* mobile */
