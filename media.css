@@ -27,10 +27,6 @@
         flex-direction: column; /* Muda a direção da lista de fontes para coluna */
         align-items: flex-start; /* Alinha os itens à esquerda */
     }
-
-    .unic{
-        height: 400px;
-    }
 }
 
 
