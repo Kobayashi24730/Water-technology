@@ -7,7 +7,7 @@
     header {
         flex-direction: column; /* Muda a direção do header para coluna */
         align-items: center; /* Centraliza os itens do header */
-        width: 100%; /* Garante que o header ocupe 100% da largura */
+        width: 90%; /* Garante que o header ocupe 100% da largura */
         padding: 10px; /* Adiciona padding */
     }
 
