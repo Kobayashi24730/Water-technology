@@ -221,6 +221,10 @@
         gap: 10px;
     }
 
+    .context{
+        font-size: 20px;
+    }
+    
     ul {
         flex-direction: column;
         gap: 10px;
