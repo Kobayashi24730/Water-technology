@@ -204,3 +204,69 @@
         height: auto; /* Mantém a proporção das imagens */
     }
 }
+
+
+@media (max-width: 720px) and (max-height: 1650px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        height: auto;
+        position: static;
+    }
+
+    #title {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    main {
+        flex-direction: column;
+        padding-top: 2rem;
+        margin-top: 0;
+    }
+
+    .section-inicio > div {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .p,
+    .p-aside,
+    .list-des li {
+        font-size: 16px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+    }
+
+    .space-div {
+        height: 3rem;
+    }
+
+    .unic {
+        height: auto;
+        padding: 10px;
+    }
+
+    .unic img {
+        width: 100%;
+    }
+}
